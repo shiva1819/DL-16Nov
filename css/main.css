@@ -1,0 +1,23 @@
+h1 {
+  background-color: brown;
+  color: #fff;
+}
+
+/* Targeting element with className */
+.fontcolor {
+  color: crimson;
+}
+/* targeting element with ID */
+#first {
+  background-color: bisque;
+  padding: 10px;
+  text-align: center;
+}
+
+/* targeting element with ElementName/ Tagname */
+h1 {
+  border: 1px solid;
+}
+.diffColor {
+  color: blue;
+}
