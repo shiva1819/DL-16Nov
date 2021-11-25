@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  /* height: 50px; */
+  background-color: crimson;
+  color: #fff;
+}
+
+#logo {
+  width: 200px;
+  /* display: inline-block; */
+  float: left;
+  padding-top: 5px;
+}
+#nav {
+  width: 500px;
+  /* display: inline-block; */
+  float: right;
+  padding-top: 10px;
+}
+
+.menuItem {
+  display: inline-block;
+  width: 100px;
+  border-right: 1px solid #fff;
+  text-align: center;
+}
+
+#cards {
+  width: 650px;
+  margin: auto;
+  border: 1px solid #000;
+  margin-top: 100px;
+}
+
+.card {
+  width: 250px;
+  display: inline-block;
+  text-align: center;
+  background-color: darkgoldenrod;
+  margin: 25px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+}
+
+.clear {
+  clear: both;
+}

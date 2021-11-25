@@ -11,12 +11,16 @@
         padding: 0px;
       }
       #bgEle {
-        height: 100vh; /* vh - viewport height*/
+        height: 150vh; /* vh - viewport height*/
         background-color: tomato;
         background-image: url(./images/bg1.jpg);
         /* background-position: center; */
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
+        background: url(./images/Welcome-design-sketch-name.png) no-repeat,
+          url(./images/bg1.jpg) no-repeat center fixed;
+        background-size: contain, cover;
       }
       .content {
         width: 50%;
