@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 250px;
+        height: 250px;
+        border: 1px solid #000;
+      }
+      .static {
+        position: static;
+        left: 10000px;
+      }
+      .realtive {
+        position: relative;
+        left: 100px;
+        top: 100px;
+      }
+      .absolute {
+        position: absolute;
+        left: -50px;
+        bottom: 50px;
+        width: 100px;
+        height: 100px;
+        background: lime;
+      }
+      .sticky {
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        height: 100px;
+        background: red;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CSS POSITIONS  -->
+    <div class="static box">Static</div>
+    <div class="realtive box">
+      realtive
+      <div class="absolute box">absolute</div>
+    </div>
+    <div class="fixed box">fixed</div>
+    <div class="sticky box">Sticky</div>
+  </body>
+</html>
