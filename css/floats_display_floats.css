@@ -1,0 +1,118 @@
+/* 
+    font-family: 'Barlow', sans-serif; - logo 
+font-family: 'Rubik', sans-serif; - test of the page
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+#main {
+  height: 100vh;
+}
+#header {
+  width: 75%;
+  margin: auto;
+  padding: 10px;
+  font-family: "Barlow", sans-serif;
+}
+.logo {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  color: darkgrey;
+  font-size: 32px;
+  text-transform: lowercase;
+}
+.nav {
+  float: right;
+  width: 90%;
+}
+.menu {
+  float: right;
+}
+.menu li {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  color: darkgrey;
+  font-weight: 100;
+}
+.menu li a {
+  text-decoration: none;
+  color: darkgrey;
+}
+#content {
+  background: #222324;
+  color: #fff;
+  padding: 20px 0px 20px 0px;
+}
+.wraper {
+  width: 75%;
+  margin: 50px auto 50px auto;
+  text-align: center;
+}
+
+.wraper > h3 {
+  font-size: 42px;
+  font-weight: 300;
+}
+.headNote {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-style: italic;
+}
+.wraperBox {
+}
+
+.wraperBox ul li {
+  list-style: none;
+  float: left;
+  width: 33%;
+  min-height: 200px;
+  padding: 30px;
+  background: lightcoral;
+  text-align: left;
+}
+.wraperBox ul li h2 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 75px;
+  background: rgba(219, 219, 219, 0.3);
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+.wraperBox ul li.seo {
+  background: rgb(21, 158, 182);
+}
+
+.wraperBox ul li.brand {
+  background: #cc6257;
+}
+
+.wraperBox ul li.brand {
+  background: #bcb021;
+}
+p.titleText {
+  margin: 25px 0px 25px 0px;
+}
+.wraperBox ul li p {
+  font-weight: 100;
+}
+.footer {
+  background: dimgray;
+  color: #fff;
+  text-align: center;
+  min-height: 145px;
+  padding: 15px;
+}
+.clear {
+  clear: both;
+}

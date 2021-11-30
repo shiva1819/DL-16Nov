@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* "With Space" -  Descendent Selector  
+        "With >" - Child Selector
+        "Width +" - Sibling Selector
+        "Width ~" - All Sibling Selector
+
+        */
+
+      .menu {
+        margin: 0px;
+        padding: 0px;
+      }
+      .menu > li {
+        background: #ccc;
+        width: 200px;
+      }
+      .menu > li > a {
+        color: red;
+        text-decoration: none;
+      }
+      .menu > li > a > h2 {
+        font-style: italic;
+      }
+
+      ul + div {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        <a href="#"> <h2>Hello world</h2></a>
+      </li>
+      <li>
+        <a href="#"> <h2>Hello world</h2></a>
+      </li>
+    </ul>
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore
+      explicabo eum omnis fugiat voluptates quis dolores perspiciatis sint
+      molestiae, ad illum doloremque tempora commodi nobis! Eum labore nobis
+      consequuntur.
+    </p> -->
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, velit!
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ea facilis,
+      quas dignissimos illum reiciendis obcaecati ipsa temporibus? Reprehenderit
+      repudiandae eligendi molestias temporibus facilis magni itaque maiores
+      tempora aliquid pariatur!
+    </div>
+  </body>
+</html>
