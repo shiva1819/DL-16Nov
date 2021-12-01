@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        overflow: auto;
+        margin: 0px;
+        padding: 0px;
+      }
+      p {
+        width: 200px;
+        height: 100px;
+        border: 1px solid;
+        /* overflow: auto; */
+        overflow-x: auto;
+        overflow-y: scroll;
+      }
+      .header {
+        width: 20%;
+        background-color: #ccc;
+        height: 100vh;
+        float: left;
+      }
+      .content {
+        width: 80%;
+        background-color: rgb(163, 136, 136);
+        height: 100vh;
+        float: left;
+        overflow-y: scroll;
+      }
+      .box {
+        height: 100vh;
+        background-color: indianred;
+      }
+      .box:nth-child(even) {
+        background: indigo;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eaque
+      odio laudantium tenetur, molestias maiores debitis inventore voluptates
+      vitae nemo nesciunt dolorem reiciendis accusamus accusantium deleniti
+      expedita quam obcaecati alias.
+    </p> -->
+
+    <div class="header">
+      <h2>Header Content</h2>
+    </div>
+    <div class="content">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+    <div style="clear: both"></div>
+  </body>
+</html>
