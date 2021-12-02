@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+            scale, 
+            translate, 
+            rotate, 
+            skew, 
+        */
+
+      ul {
+        width: 75%;
+        margin: 100px auto 0px auto;
+      }
+      ul li {
+        width: 200px;
+        display: inline-block;
+        border: 1px solid;
+        text-align: center;
+        line-height: 200px;
+        height: 200px;
+        transition: 1s;
+        transform-style: preserve-3d;
+        transform-origin: -100px 0px;
+      }
+      #scale:hover {
+        transform: scale(1.5, 1.5);
+      }
+      #translate:hover {
+        transform: translate(-100px, -100px);
+      }
+      #rotate:hover {
+        transform: rotateZ(180deg);
+        border-radius: 50%;
+      }
+      #skew {
+        transform: skew(-45deg);
+      }
+      #skew:hover {
+        transform: skew(0deg);
+      }
+      .card {
+        width: 250px;
+        height: 250px;
+        border: 1px solid;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+      }
+      .card img {
+        width: 100%;
+        position: absolute;
+        transition: 1s;
+      }
+      .card:hover img {
+        transform: scale(1.25, 1.25);
+      }
+      .description {
+        width: 250px;
+        margin: auto;
+        transition: 1s;
+      }
+      .card:hover + .description {
+        transform: translateY(-50px);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="scale">Scale</li>
+      <li id="translate">Translate</li>
+      <li id="rotate">rotate</li>
+      <li id="skew">Skew</li>
+    </ul>
+
+    <div class="card">
+      <img src="./images/user1.png" alt="user1" />
+    </div>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ratione.
+    </p>
+  </body>
+</html>
