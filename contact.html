@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .contact {
+        width: 50%;
+        margin: 250px auto;
+        border: 1px solid;
+        padding: 25px;
+      }
+      form div {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        overflow: hidden;
+      }
+      form div input {
+        width: 100%;
+        padding: 5px;
+        line-height: 20px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+      /* label {
+        line-height: 20px;
+      } */
+      .btn {
+        text-align: center;
+      }
+      .btn button {
+        width: 250px;
+        padding: 10px;
+        background: brown;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact">
+      <form action="/">
+        <div class="name">
+          <label for="name"> Name </label>
+          <input type="text" name="name" />
+        </div>
+        <div class="password">
+          <label for="password"> Password </label>
+          <input type="password" name="password" />
+        </div>
+        <div class="btn">
+          <button type="button">Sign in</button>
+          <button type="button">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
