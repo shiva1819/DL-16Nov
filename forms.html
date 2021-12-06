@@ -5,14 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      input[type="text"] {
+        color: red;
+      }
+      textarea {
+        margin: 0px;
+        padding: 5px;
+        width: 300px;
+        height: 250px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <form action="index.html">
-      <input type="text" />
-      <input type="password" />
-      <input type="email" />
-      <input type="number" />
-      <input type="search" name="search" id="search" />
+      <label for="username"> Name </label>
+      <input type="text" required value="smith" name="username" minlength="5" />
+      <input type="password" required placeholder="Enter Your Password" />
+      <input type="email" required />
+      <input type="number" minlength="10" readonly value="9999999999" />
+      <input type="search" name="search" id="search" maxlength="" />
       <input type="date" name="date" id="date" />
       <input type="color" name="" id="" />
       <div>
@@ -35,6 +49,11 @@
         <input type="submit" value="sign up" />
         <input type="button" value="sign in" />
         <button type="button">forgot Password</button>
+      </div>
+      <div>
+        <textarea name="" id="" cols="30" rows="10">
+          askjdhjaksasjkdhk
+        </textarea>
       </div>
     </form>
   </body>
