@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wheel {
+      width: 200px;
+      height: 200px;
+      margin: 200px auto;
+      /* transition: 1s; */
+      animation-name: wheeler;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    div.wheel img {
+      width: 100%;
+    }
+    .wheel:hover {
+      animation-play-state: paused;
+    }
+    @keyframes wheeler {
+      from {
+        transform: rotate(1turn);
+      }
+      to {
+        transform: rotate(2turn);
+      }
+    }
+    .arrow {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      top: 40%;
+      left: 30%;
+    }
+    .arrow img {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="wheel">
+      <img src="../images/wheel.png" alt="wheel" />
+    </div>
+    <div class="arrow">
+      <img src="../images/arrow.png" alt="arrow" />
+    </div>
+  </body>
+</html>
