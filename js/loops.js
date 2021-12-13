@@ -1,24 +1,3 @@
-var arr;
-arr = new Array();
-
-arr[0] = 1;
-arr[1] = "string";
-arr[2] = true;
-
-console.log(typeof arr);
-
-// JSON DATA
-var fruits = [
-  { fruitName: "Apple", price: 20 },
-  { fruitName: "Orange", price: 10 },
-  { fruitName: "Kiwi", price: 30 },
-];
-
-console.log(fruits[0].fruitName);
-console.log(fruits[1].fruitName);
-console.log(fruits[2].fruitName);
-
-// Print Name & geo
 var users = [
   {
     id: 1,
@@ -252,5 +231,36 @@ var users = [
   },
 ];
 
-console.log(users[0].name);
-console.log(users[0].address.geo.lat, users[0].address.geo.lng);
+// for, for-in, while, do-while
+// users = [1, 2, 3];
+console.log(users.length);
+
+for (var i = 0; i < users.length; i++) {
+  //   console.log(users[i].name);
+}
+
+// while ------------------------------------ :
+var i = 0;
+while (i < 10) {
+  //   console.log(users[i].name);
+  i++;
+}
+
+// do-while : -------------------------------;
+
+var j = 0;
+do {
+  console.log(users[j].name);
+  j++;
+} while (j < users.le);
+
+// for-in: -----------------------------------;
+var result = "";
+for (var user in users) {
+  //   console.log(users[user].name);
+  result += '<h1 class="name">' + users[user].name + "</h1>";
+  result += '<h1 class="name">' + users[user].email + "</h1>";
+  result += '<h1 class="name">' + users[user].address.zipcode + "</h1> <hr/>";
+}
+
+console.log(result);

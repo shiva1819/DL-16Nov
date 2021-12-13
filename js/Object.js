@@ -11,6 +11,9 @@ var phone = {
   location: undefined,
   colors: ["red", "green", "white", "black"],
   dimensions: { width: "200cm", height: "200cm" },
+  testFn: function () {
+    alert("test FUnction");
+  },
 };
 
 console.log(phone["modal Name"]);
@@ -20,3 +23,4 @@ console.log(phone["colors"][2]);
 
 // width - height
 console.log(phone["dimensions"].height);
+phone.testFn();
