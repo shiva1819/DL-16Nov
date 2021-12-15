@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script></script>
+    <style>
+      ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 10px;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="one" class="one">
+        <h1>Hello One!</h1>
+      </li>
+      <li class="one">
+        <h1>Hello Two!</h1>
+      </li>
+      <li>
+        <h1>Hello Three</h1>
+      </li>
+    </ul>
+
+    <ul id="projectSomeVal"></ul>
+    <script>
+      // DOM;
+
+      // docuemnt.getElementByID('one');
+
+      var elementOne = document.getElementById("one");
+      var elementOne = document.getElementsByClassName("one");
+      //   console.log(elementOne);
+
+      for (var i = 0; i < elementOne.length; i++) {
+        console.log((elementOne[i].style.color = "red"));
+      }
+      var elementOne = document.getElementsByTagName("li")[2];
+      elementOne.innerText = "From JS";
+      console.log(elementOne);
+
+      // Change the Exisiting content:
+      //   innerHTML, innerText.
+      var elementOne = document.getElementById("one");
+
+      elementOne.innerText = "<h1> New text from JS </h1>";
+      elementOne.innerHTML = "<h1> New text from JS </h1>";
+
+      var arr = [
+        { name: "somex", age: 20 },
+        { name: "somey", age: 30 },
+      ];
+
+      var result = "";
+      for (var i = 0; i < arr.length; i++) {
+        result += "<li><h2>" + arr[i].name + "</h2>";
+        result += "<p>" + arr[i].age + "</p></li>";
+      }
+
+      var projectSomeVal = document.getElementById("projectSomeVal");
+
+      projectSomeVal.innerHTML = result;
+      //   console.log(result);
+    </script>
+  </body>
+</html>

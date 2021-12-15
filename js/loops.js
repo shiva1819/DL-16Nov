@@ -233,7 +233,7 @@ var users = [
 
 // for, for-in, while, do-while
 // users = [1, 2, 3];
-console.log(users.length);
+console.log(users);
 
 for (var i = 0; i < users.length; i++) {
   //   console.log(users[i].name);
@@ -264,3 +264,24 @@ for (var user in users) {
 }
 
 console.log(result);
+
+// switch;
+var val = "";
+
+switch (val) {
+  case "abc": {
+    console.log("Print abc....");
+    break;
+  }
+  case "def": {
+    console.log("Print def...");
+    break;
+  }
+  case "name": {
+    console.log("Name");
+    break;
+  }
+  default: {
+    alert("This value is not in case...");
+  }
+}
