@@ -29,6 +29,8 @@
     </ul>
 
     <ul id="projectSomeVal"></ul>
+
+    <div id="wrap"></div>
     <script>
       // DOM;
 
@@ -36,6 +38,7 @@
 
       var elementOne = document.getElementById("one");
       var elementOne = document.getElementsByClassName("one");
+      var _wrap = document.getElementById("wrap");
       //   console.log(elementOne);
 
       for (var i = 0; i < elementOne.length; i++) {
@@ -67,6 +70,27 @@
 
       projectSomeVal.innerHTML = result;
       //   console.log(result);
+
+      // Create Elements - div, span, h1, ul, li, img
+      // Add ID, Class - Attributes.
+      // add the element to Parent Element.
+
+      //  Create Element:
+      var _newDiv = document.createElement("div");
+
+      // Add Attribute - Added Class Name.
+      _newDiv.setAttribute("class", "randomDiv");
+
+      // Add it to Parent Element
+      // parent.appendChild(child);
+
+      _newDiv.innerHTML =
+        "<h1> the Random Number: " + Math.floor(Math.random() * 10) + "</h1>";
+      console.log(_newDiv);
+      // _wrap.appendChild(_newDiv);
+
+      console.log(_wrap);
+      _wrap.appendChild(_newDiv);
     </script>
   </body>
 </html>
