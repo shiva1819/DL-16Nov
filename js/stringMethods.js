@@ -21,3 +21,29 @@ console.log(email);
 // }
 
 // substr, substring, slice
+
+//  ---> 0111
+// <---  72, -71,-70
+var loremStr =
+  "The Wright brothers – Orville (1871–1948) and Wilbur (1867–1912) – were American aviation pioneers generally credited with inventing, building, and flying the world's first successful motor-operated airplane.";
+
+console.log(loremStr.indexOf("American"));
+
+var lenOfStr = "American";
+
+console.log(loremStr.substring(-72, 18));
+console.log(
+  loremStr.substring(
+    loremStr.indexOf("American"),
+    loremStr.indexOf("American") + lenOfStr.length
+  )
+  //  72, 80
+);
+
+// substr
+console.log(loremStr.substr(loremStr.indexOf("American"), lenOfStr.length));
+//  72, 8
+
+// slice
+
+console.log(loremStr.slice(0, 18));

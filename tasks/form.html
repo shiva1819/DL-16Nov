@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="fl">
+        <h3 class="mainTitle">COVID - vaccination - TRACKER</h3>
+        <div class="formWrap">
+          <div class="formEle">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              autocomplete="off"
+              class="InputField"
+            />
+          </div>
+          <div class="formEle">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              autocomplete="off"
+              class="InputField"
+            />
+          </div>
+          <div class="formEle">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="off"
+              class="InputField"
+            />
+          </div>
+          <div class="formEle">
+            <i class="fas fa-id-card"></i>
+            <input
+              type="text"
+              name="aadhar"
+              id="aadhar"
+              placeholder="Aadhar Number"
+              autocomplete="off"
+              class="InputField"
+            />
+          </div>
+          <div class="formEle">
+            <i class="fas fa-phone-square-alt"></i>
+            <input
+              type="text"
+              name="contact"
+              id="contact"
+              placeholder="Contact No"
+              autocomplete="off"
+              autocapitalize="on"
+              class="InputField"
+            />
+          </div>
+          <div class="formEle">
+            <select name="vaccineName" id="vaccineName">
+              <option value="none">-- Please Choose Vaccine Type --</option>
+              <option value="covishiled">Covishiled</option>
+              <option value="covaxin">Covaxin</option>
+            </select>
+          </div>
+          <div class="formEle" style="padding-top: 30px; text-align: center">
+            <p style="padding: 10px">Dosage Information</p>
+            <label for="name"> 1st Dose </label>
+            <input type="checkbox" name="dose1" id="dose1" class="doseInfo" />
+            <span style="padding: 0px 20px 0px 0px"></span>
+            <label for="name"> 2nd Dose </label>
+            <input type="checkbox" name="dose2" id="dose2" class="doseInfo" />
+          </div>
+          <div class="formEle" style="margin-top: 30px">
+            <button type="button" id="signup">
+              Sign up <i class="fas fa-user-plus"></i>
+            </button>
+            <p style="padding: 10px; text-align: center">
+              Already Registerd ?
+              <a href="#" id="login" class="login"> Login </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="fr">
+        <div class="imgWrap">
+          <img src="../images/vaccination.png" alt="vaccination" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

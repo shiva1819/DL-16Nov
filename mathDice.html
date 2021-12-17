@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dice1 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -2px -40px;
+      }
+      .dice2 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -90px -40px;
+      }
+      .dice3 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -175px -40px;
+      }
+      .dice4 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -2px -135px;
+      }
+      .dice5 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -90px -135px;
+      }
+      .dice6 {
+        width: 80px;
+        height: 80px;
+        background: url(./images/dice.jpg) no-repeat;
+        background-position: -175px -135px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <!-- <div class="dice6"></div> -->
+    </div>
+    <script>
+      var _main = document.getElementById("main");
+      var _randomNum = Math.ceil(Math.random() * 6);
+      console.log(_randomNum);
+
+      var $div = document.createElement("div");
+      $div.setAttribute("class", "dice" + _randomNum);
+
+      console.log($div);
+
+      _main.innerHTML = "";
+      _main.appendChild($div);
+    </script>
+  </body>
+</html>
