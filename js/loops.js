@@ -263,10 +263,10 @@ for (var user in users) {
   result += '<h1 class="name">' + users[user].address.zipcode + "</h1> <hr/>";
 }
 
-console.log(result);
+// console.log(result);
 
 // switch;
-var val = "";
+var val = "abc";
 
 switch (val) {
   case "abc": {
