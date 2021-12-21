@@ -261,13 +261,22 @@ var arr = [1, 2];
 
 // adding a value to array
 // Push - add a value as a last one,
-//  pop, shift, unshift
+// unshift -  add a value as first one
 
 arr.push(3);
 arr.push(4);
 arr.push(5);
+arr.unshift(0);
 
 // remove
 
-// delete, slice, - splice
+// delete, slice, pop, shift - splice
+// delete arr[1];
+// arr = arr.slice(0, 2);
+arr.pop();
+arr.pop();
+
+arr.shift();
+
+arr.splice(1, 2);
 console.log(arr);
