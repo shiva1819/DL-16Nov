@@ -5,7 +5,7 @@ arr[0] = 1;
 arr[1] = "string";
 arr[2] = true;
 
-console.log(typeof arr);
+// console.log(typeof arr);
 
 // JSON DATA
 var fruits = [
@@ -14,9 +14,9 @@ var fruits = [
   { fruitName: "Kiwi", price: 30 },
 ];
 
-console.log(fruits[0].fruitName);
-console.log(fruits[1].fruitName);
-console.log(fruits[2].fruitName);
+// console.log(fruits[0].fruitName);
+// console.log(fruits[1].fruitName);
+// console.log(fruits[2].fruitName);
 
 // Print Name & geo
 var users = [
@@ -252,5 +252,22 @@ var users = [
   },
 ];
 
-console.log(users[0].name);
-console.log(users[0].address.geo.lat, users[0].address.geo.lng);
+// console.log(users[0].name);
+// console.log(users[0].address.geo.lat, users[0].address.geo.lng);
+
+// Array Add or Remove Methods:
+var arr = [1, 2];
+// arr[3] = 3;
+
+// adding a value to array
+// Push - add a value as a last one,
+//  pop, shift, unshift
+
+arr.push(3);
+arr.push(4);
+arr.push(5);
+
+// remove
+
+// delete, slice, - splice
+console.log(arr);
