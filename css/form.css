@@ -110,6 +110,17 @@ button#signup > .fas {
   width: 60%;
   margin-top: 90px;
 }
+.erroLog {
+  width: 300px;
+  padding: 25px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  background: crimson;
+  color: #fff;
+  border-radius: 5px;
+}
 
 .imgWrap {
   width: 75%;
