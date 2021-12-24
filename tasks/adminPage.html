@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Fira Sans", sans-serif;
+      }
+      body {
+        background: url(../images/wave.svg) no-repeat bottom center;
+        background-size: contain;
+        height: 100vh;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table tr {
+        border-bottom: 1px solid #ccc;
+      }
+      table tr td,
+      th {
+        padding: 10px;
+      }
+      .main_admin {
+        min-height: 100vh;
+      }
+      .header {
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        background-color: #274072;
+        color: #fff;
+      }
+      .nav {
+        width: 75%;
+        margin: auto;
+      }
+      .fl {
+        float: left;
+      }
+      .fr {
+        float: right;
+      }
+      .logo {
+        width: 10%;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .userProfile {
+        width: 90%;
+      }
+      .userProfile ul {
+        float: right;
+      }
+      .userProfile ul li {
+        display: inline-block;
+        padding: 10px;
+      }
+      #logout {
+        width: 75px;
+        padding: 5px;
+        background: #ff5722;
+        color: #fff;
+        border: none;
+        box-shadow: 1px 1px 2px 0px #000;
+        border-radius: 3px;
+        font-size: 16px;
+        font-weight: 100;
+        cursor: pointer;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .p-5 {
+        padding-top: 25px;
+      }
+      .pt-5 {
+        padding-top: 25px;
+      }
+      .w-75 {
+        width: 75%;
+        margin: auto;
+      }
+      .mainContentHeader {
+        width: 20%;
+        position: relative;
+      }
+      .mainContentHeader::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: coral;
+        left: 35px;
+        bottom: -7px;
+      }
+      .m-auto {
+        margin: auto;
+      }
+      .mt-5 {
+        margin-top: 35px;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_admin">
+      <div class="header">
+        <div class="nav">
+          <div class="logo fl">
+            <h3>Covid</h3>
+          </div>
+          <div class="userProfile fr">
+            <ul>
+              <li id="userName">Admin</li>
+              <li>
+                <button type="button" id="logout">Logout</button>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="mainContent">
+        <h2 class="text-center p-5 border-bottom mainContentHeader m-auto">
+          Welcomto Admin Page
+        </h2>
+        <table class="m-auto w-75 text-center mt-5 pt-5">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Password</th>
+              <th>Email</th>
+              <th>aadhar Number</th>
+              <th>Contact Number</th>
+              <th>vaccination name</th>
+              <th>Full Dose</th>
+              <th>Edit/Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Password</td>
+              <td>Email</td>
+              <td>aadhar Number</td>
+              <td>Contact Number</td>
+              <td>vaccination name</td>
+              <td>Full Dose</td>
+              <td>
+                <button type="button" id="Edit">Edit</button>
+                <button type="button" id="Save">Save</button>
+                <button type="button" id="Delete">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

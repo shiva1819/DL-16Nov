@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../css/bindinData.css" />
     <link rel="stylesheet" href="../css/form.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,6 +111,78 @@
         </div>
       </div>
     </div>
+
+    <!-- Data Binding Starts here  -->
+    <div class="BindData">
+      <div class="main_admin">
+        <div class="header">
+          <div class="nav">
+            <div class="logo flData">
+              <h3>Covid</h3>
+            </div>
+            <div class="userProfile frData">
+              <ul>
+                <li id="userName">Admin</li>
+                <li>
+                  <button type="button" id="logout">Logout</button>
+                </li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="mainContent">
+          <h2 class="text-center p-5 border-bottom mainContentHeader m-auto">
+            Welcomto Admin Page
+          </h2>
+          <table class="m-auto w-75 text-center mt-5 pt-5">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>aadhar Number</th>
+                <th>Contact Number</th>
+                <th>vaccination name</th>
+                <th>Full Dose</th>
+                <th>Edit/Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>Password</td>
+                <td>Email</td>
+                <td>aadhar Number</td>
+                <td>Contact Number</td>
+                <td>vaccination name</td>
+                <td>Full Dose</td>
+                <td>
+                  <button type="button" class="Edit">Edit</button>
+                  <button type="button" class="Save">Save</button>
+                  <button type="button" class="Delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>Password</td>
+                <td>Email</td>
+                <td>aadhar Number</td>
+                <td>Contact Number</td>
+                <td>vaccination name</td>
+                <td>Full Dose</td>
+                <td>
+                  <button type="button" class="Edit">Edit</button>
+                  <button type="button" class="Save">Save</button>
+                  <button type="button" class="Delete">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="BindDate1"></div>
     <script src="../js/covid_main.js"></script>
   </body>
 </html>

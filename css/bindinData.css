@@ -1,0 +1,96 @@
+/* Binding Data Code... */
+.BindData {
+  min-height: 100vh;
+  height: 100vh;
+  background: url(../images/wave.svg) no-repeat bottom center;
+  /* background: #274072; */
+}
+
+table {
+  border-collapse: collapse;
+}
+table tr {
+  border-bottom: 1px solid #ccc;
+}
+table tr td,
+th {
+  padding: 10px;
+}
+.main_admin {
+  min-height: 100vh;
+}
+.header {
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  background-color: #274072;
+  color: #fff;
+}
+.nav {
+  width: 75%;
+  margin: auto;
+}
+.flData {
+  float: left;
+}
+.frData {
+  float: right;
+}
+.logo {
+  width: 10%;
+  padding: 10px;
+  font-size: 20px;
+}
+.userProfile {
+  width: 90%;
+}
+.userProfile ul {
+  float: right;
+}
+.userProfile ul li {
+  display: inline-block;
+  padding: 10px;
+}
+#logout {
+  width: 75px;
+  padding: 5px;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  box-shadow: 1px 1px 2px 0px #000;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+.p-5 {
+  padding-top: 25px;
+}
+.pt-5 {
+  padding-top: 25px;
+}
+.w-75 {
+  width: 75%;
+  margin: auto;
+}
+.mainContentHeader {
+  width: 20%;
+  position: relative;
+}
+.mainContentHeader::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: coral;
+  left: 35px;
+  bottom: -7px;
+}
+.m-auto {
+  margin: auto;
+}
+.mt-5 {
+  margin-top: 35px;
+}

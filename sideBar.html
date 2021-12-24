@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #menuBtn {
+        position: absolute;
+        right: 100px;
+        top: 100;
+        width: 100px;
+        padding: 5px;
+        border: 1px solid red;
+        cursor: pointer;
+      }
+      #mainPage {
+        width: 30%;
+        background: #ccc;
+        height: 100vh;
+        transition: 0.4s;
+        margin-left: -30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="menuBtn">Click Here</div>
+      <div id="mainPage">This is main Page</div>
+    </div>
+    <script>
+      var Btn = document.getElementById("menuBtn");
+      var mainPage = document.getElementById("mainPage");
+
+      mainPage.style.marginLeft = "-30%";
+
+      Btn.onclick = function () {
+        if (mainPage.style.marginLeft == "-30%") {
+          mainPage.style.marginLeft = "0px";
+        } else {
+          mainPage.style.marginLeft = "-30%";
+        }
+      };
+
+      //   [1.jpg, 2.jpg, 3.jpg];
+    </script>
+  </body>
+</html>
