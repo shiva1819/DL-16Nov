@@ -1,0 +1,25 @@
+.userAccount {
+  width: 75%;
+  margin: 50px auto;
+  min-height: 79vh;
+  box-sizing: border-box;
+}
+.userAccount h2,
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+#userBindAccountInfo {
+  width: 30%;
+  margin: auto;
+  margin-top: 35px;
+}
+#userBindAccountInfo tr {
+  border: none;
+}
+
+#userBindAccountInfo tr td:first-of-type {
+  text-align: right;
+  width: 50%;
+}

@@ -5,7 +5,9 @@
   background: url(../images/wave.svg) no-repeat bottom center;
   /* background: #274072; */
 }
-
+.mainContent {
+  min-height: 100vh;
+}
 table {
   border-collapse: collapse;
 }

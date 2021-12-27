@@ -77,28 +77,18 @@ signup.addEventListener("click", function () {
   loginForm(_email, _aadhar, _contact, _vaccineName, _dose1, _dose2, "none");
   // }
 
-  // console.log($userDetails);
+  console.log($userDetails);
 
-  // console.log(userCollection);
+  userCollection.push($userDetails);
+  console.log(userCollection);
 
-  if (localStorage.getItem("covidInfo") == null) {
-    userCollection.push($userDetails);
-    localStorage.setItem("covidInfo", JSON.stringify(userCollection));
-  } else {
-    var getLocalDataValues = JSON.parse(localStorage.getItem("covidInfo"));
-    console.log(getLocalDataValues);
-    getLocalDataValues.push($userDetails);
-    console.log(getLocalDataValues);
-    // debugger;
-    localStorage.setItem("covidInfo", JSON.stringify(getLocalDataValues));
+  for (var i = 0; i < userCollection.length; i++) {
+    console.log("<h1>" + userCollection[i].name + "</h1>");
   }
 
-  // covidInfo == "" || 0 || null
-  // for (var i = 0; i < userCollection.length; i++) {
-  //   console.log("<h1>" + userCollection[i].name + "</h1>");
-  // }
-
   // Web Storgae: local, session:
+
+  localStorage.setItem("covidInfo-1", JSON.stringify(userCollection));
 
   // console.log(localStorage.getItem("covidInfo")[0]);
 
@@ -120,54 +110,31 @@ signup.addEventListener("click", function () {
     _main.style.display = "none";
     _bindData.style.display = "block";
 
-    // var _EditAsAdmin = document.getElementsByClassName("Edit");
-    // var _SaveAsAdmin = document.getElementsByClassName("Save");
-    // var _DeleteAsAdmin = document.getElementsByClassName("Delete");
+    var _EditAsAdmin = document.getElementsByClassName("Edit");
+    var _SaveAsAdmin = document.getElementsByClassName("Save");
+    var _DeleteAsAdmin = document.getElementsByClassName("Delete");
 
-    // for (var j = 0; j < _EditAsAdmin.length; j++) {
-    //   _SaveAsAdmin[j].style.display = "none";
-    //   _EditAsAdmin[j].onclick = function () {
-    //     debugger;
-    //     _SaveAsAdmin[0].style.display = "inline";
-    //     var _editTR = this.parentNode.parentNode.children[1];
-    //     var _editTrText = _editTR.innerText;
+    for (var j = 0; j < _EditAsAdmin.length; j++) {
+      _SaveAsAdmin[j].style.display = "none";
+      _EditAsAdmin[j].onclick = function () {
+        debugger;
+        _SaveAsAdmin[0].style.display = "inline";
+        var _editTR = this.parentNode.parentNode.children[1];
+        var _editTrText = _editTR.innerText;
 
-    //     // var editTrName = document.createElement("input");
-    //     // editTrName.value = _editTrText;
+        // var editTrName = document.createElement("input");
+        // editTrName.value = _editTrText;
 
-    //     // console.log(editTrName);
-    //     _editTR.innerHTML = "<input value='" + _editTrText + "'>";
-    //     this.style.display = "none";
+        // console.log(editTrName);
+        _editTR.innerHTML = "<input value='" + _editTrText + "'>";
+        this.style.display = "none";
 
-    //     _SaveAsAdmin[0].onclick = function () {
-    //       _editTR.innerText = _editTR.children[0].value;
-    //       _EditAsAdmin[0].style.display = "inline";
-    //       this.style.display = "none";
-    //     };
-    //   };
-    // }
-
-    if (_name.value == "admin" && _password.value == "admin") {
-      document.getElementsByClassName("mainContent")[0].style.display = "block";
-      document.getElementsByClassName("userAccount")[0].style.display = "none";
-    } else {
-      var userlocalData = localStorage.getItem("covidInfo");
-      userlocalData = JSON.parse(userlocalData);
-      console.log(userlocalData);
-      var TR = "";
-      userlocalData.forEach(function (v, i) {
-        if (_name.value === v.name) {
-          TR += "<tr><td> NAME </td><td>" + v.name + "</td></tr>";
-          TR += "<tr><td> NAME </td><td>" + v.name + "</td></tr>";
-          TR += "<tr><td> NAME </td><td>" + v.name + "</td></tr>";
-          TR += "<tr><td> NAME </td><td>" + v.name + "</td></tr>";
-          TR += "<tr><td> NAME </td><td>" + v.name + "</td></tr>";
-        }
-      });
-      console.log(TR);
-      document.getElementById("BindDataFromLocalToTbody").innerHTML = TR;
-      document.getElementsByClassName("mainContent")[0].style.display = "none";
-      document.getElementsByClassName("userAccount")[0].style.display = "block";
+        _SaveAsAdmin[0].onclick = function () {
+          _editTR.innerText = _editTR.children[0].value;
+          _EditAsAdmin[0].style.display = "inline";
+          this.style.display = "none";
+        };
+      };
     }
   };
 });
