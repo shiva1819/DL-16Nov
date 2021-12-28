@@ -83,7 +83,8 @@
 }
 button#signup,
 #signIn,
-#update {
+#update,
+.signin {
   width: 100%;
   padding: 10px;
   background: rgba(237, 101, 100, 1);
@@ -96,7 +97,8 @@ button#signup,
   position: relative;
   cursor: pointer;
 }
-button#signup > .fas {
+button#signup > .fas,
+.signin > .fas {
   position: absolute;
   right: -150px;
   top: 12px;

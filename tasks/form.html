@@ -90,14 +90,34 @@
           <div class="formEle" style="padding-top: 30px; text-align: center">
             <p style="padding: 10px">Dosage Information</p>
             <label for="name"> 1st Dose </label>
-            <input type="checkbox" name="dose1" id="dose1" class="doseInfo" />
+            <input
+              type="checkbox"
+              name="dose1"
+              id="dose1"
+              class="doseInfo"
+              value="dose1"
+            />
             <span style="padding: 0px 20px 0px 0px"></span>
             <label for="name"> 2nd Dose </label>
-            <input type="checkbox" name="dose2" id="dose2" class="doseInfo" />
+            <input
+              type="checkbox"
+              name="dose2"
+              id="dose2"
+              class="doseInfo"
+              value="dose2"
+            />
           </div>
           <div class="formEle" style="margin-top: 30px">
             <button type="button" id="signup">
               Sign up <i class="fas fa-user-plus"></i>
+            </button>
+            <button
+              type="button"
+              id="signin"
+              class="signin"
+              style="display: none"
+            >
+              Sign in <i class="fas fa-user-plus"></i>
             </button>
             <p style="padding: 10px; text-align: center">
               Already Registerd ?
@@ -149,7 +169,7 @@
                 <th>Edit/Delete</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="adminUserBindData">
               <tr>
                 <td>Name</td>
                 <td>Password</td>
