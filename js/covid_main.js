@@ -30,162 +30,171 @@ ErroLog.setAttribute("class", "erroLog");
 
 signup.addEventListener("click", function () {
   console.log(_name.value);
+  var _stringRegEx = /^[a-zA-Z]+$/;
+  var _emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  var _aahHarRegEx = /^[0-9]{12}/;
+  var _contactRegEx = /^[0-9]{10}/;
+
   var $userDetails = {};
   // "asdas" === "" || 5 > 4
-
-  // if (_name.value.length === "" || _name.value.length < 4) {
-  //   // _name.style.borderBottom = "1px solid red";
-  //   alert("Name: Please Enter a valid Name!");
-  //   ErroLog.innerText = "Name: Please Enter a valid Name!";
-  //   _body.appendChild(ErroLog);
-  //   return false;
-  // } else if (_password.value.length === "" || _password.value.length < 5) {
-  //   _name.style.borderBottom = "1px solid #fff";
-
-  //   alert("Password: Please Enter minmum 6 chars !");
-  //   ErroLog.innerText = "Password: Please Enter minmum 6 chars !";
-  //   return false;
-  // } else if (_email.value.indexOf("@") === -1) {
-  //   alert("Email: Please Enter Correct Email !");
-  //   return false;
-  // } else if (_aadhar.value.length < 12) {
-  //   alert("Aadhar: Please Enter Correct aadhar !");
-  //   return false;
-  // } else if (_contact.value.length < 10) {
-  //   alert("Contact: Please Enter Correct Phone !");
-  //   return false;
-  // } else if (_vaccineName.value === "none") {
-  //   alert("Vaccication: Please Choose a vaccication !");
-  //   return false;
-  // } else {
-  $userDetails.name = _name.value;
-  $userDetails.password = _password.value;
-  $userDetails.email = _email.value;
-  $userDetails.aadhar = _aadhar.value;
-  $userDetails.contact = _contact.value;
-  $userDetails.vaccineName = _vaccineName.value;
-
-  if (_dose1.checked && _dose2.checked) {
-    $userDetails.coverage = "Fully Vaccinated";
-  } else if (_dose1.checked) {
-    $userDetails.coverage = "Partially Vaccinated";
-  } else if (!_dose1.checked && _dose2.checked) {
-    $userDetails.coverage = "Invalid Vaccination";
+  console.log(_stringRegEx.test(_name.value));
+  if (!_stringRegEx.test(_name.value)) {
+    // _name.style.borderBottom = "1px solid red";
+    alert("Name: Please Enter a valid Name!");
+    ErroLog.innerText = "Name: Please Enter a valid Name!";
+    _body.appendChild(ErroLog);
+    return false;
+  } else if (_password.value.length === "" || _password.value.length < 5) {
+    _name.style.borderBottom = "1px solid #fff";
+    alert("Password: Please Enter minmum 6 chars !");
+    ErroLog.innerText = "Password: Please Enter minmum 6 chars !";
+    return false;
+  } else if (!_emailRegex.test(_email.value)) {
+    alert("Email: Please Enter Correct Email !");
+    return false;
+  } else if (!_aahHarRegEx.test(_aadhar.value)) {
+    alert("Aadhar: Please Enter Correct aadhar !");
+    return false;
+  } else if (!_contactRegEx.test(_contact.value)) {
+    alert("Contact: Please Enter Correct Phone !");
+    return false;
+  } else if (_vaccineName.value === "none") {
+    alert("Vaccication: Please Choose a vaccication !");
+    return false;
   } else {
-    $userDetails.coverage = "Not Vaccinated ";
-  }
-  // $userDetails.dose1 = _dose1.value;
-  // $userDetails.dose2 = _dose2.value;
-  ErroLog.style.display = "none";
-  resetForm(
-    _name,
-    _password,
-    _email,
-    _aadhar,
-    _contact,
-    _vaccineName,
-    _dose1,
-    _dose2
-  );
-  loginForm(_email, _aadhar, _contact, _vaccineName, _dose1, _dose2, "none");
-  // }
+    $userDetails.name = _name.value;
+    $userDetails.password = _password.value;
+    $userDetails.email = _email.value;
+    $userDetails.aadhar = _aadhar.value;
+    $userDetails.contact = _contact.value;
+    $userDetails.vaccineName = _vaccineName.value;
 
-  // console.log($userDetails);
-
-  // console.log(userCollection);
-
-  if (localStorage.getItem("covidInfo") == null) {
-    userCollection.push($userDetails);
-    localStorage.setItem("covidInfo", JSON.stringify(userCollection));
-  } else {
-    var getLocalDataValues = JSON.parse(localStorage.getItem("covidInfo"));
-    console.log(getLocalDataValues);
-    getLocalDataValues.push($userDetails);
-    console.log(getLocalDataValues);
-    // debugger;
-    localStorage.setItem("covidInfo", JSON.stringify(getLocalDataValues));
-  }
-
-  // covidInfo == "" || 0 || null
-  // for (var i = 0; i < userCollection.length; i++) {
-  //   console.log("<h1>" + userCollection[i].name + "</h1>");
-  // }
-
-  // Web Storgae: local, session:
-
-  // console.log(localStorage.getItem("covidInfo")[0]);
-
-  // window.location.href = "../contact.html"; // to get ir set current location.
-  // console.log(window.location.href);
-
-  var _signIn = document.createElement("button");
-  _signIn.id = "signIn";
-  _signIn.innerText = "Sign In";
-
-  /* ----------------  task ------------------- */
-  // replace Already Registered with, Not Registered yet? signUp
-  /* ----------------  task ------------------- */
-
-  this.parentNode.replaceChild(_signIn, this);
-
-  _signIn.onclick = function () {
-    // window.location.href = "../tasks/adminPage.html";
-    _main.style.display = "none";
-    _bindData.style.display = "block";
-
-    // var _EditAsAdmin = document.getElementsByClassName("Edit");
-    // var _SaveAsAdmin = document.getElementsByClassName("Save");
-    // var _DeleteAsAdmin = document.getElementsByClassName("Delete");
-
-    // for (var j = 0; j < _EditAsAdmin.length; j++) {
-    //   _SaveAsAdmin[j].style.display = "none";
-    //   _EditAsAdmin[j].onclick = function () {
-    //     debugger;
-    //     _SaveAsAdmin[0].style.display = "inline";
-    //     var _editTR = this.parentNode.parentNode.children[1];
-    //     var _editTrText = _editTR.innerText;
-
-    //     // var editTrName = document.createElement("input");
-    //     // editTrName.value = _editTrText;
-
-    //     // console.log(editTrName);
-    //     _editTR.innerHTML = "<input value='" + _editTrText + "'>";
-    //     this.style.display = "none";
-
-    //     _SaveAsAdmin[0].onclick = function () {
-    //       _editTR.innerText = _editTR.children[0].value;
-    //       _EditAsAdmin[0].style.display = "inline";
-    //       this.style.display = "none";
-    //     };
-    //   };
+    if (_dose1.checked && _dose2.checked) {
+      $userDetails.coverage = "Fully Vaccinated";
+    } else if (_dose1.checked) {
+      $userDetails.coverage = "Partially Vaccinated";
+    } else if (!_dose1.checked && _dose2.checked) {
+      $userDetails.coverage = "Invalid Vaccination";
+    } else {
+      $userDetails.coverage = "Not Vaccinated ";
+    }
+    // $userDetails.dose1 = _dose1.value;
+    // $userDetails.dose2 = _dose2.value;
+    ErroLog.style.display = "none";
+    resetForm(
+      _name,
+      _password,
+      _email,
+      _aadhar,
+      _contact,
+      _vaccineName,
+      _dose1,
+      _dose2
+    );
+    loginForm(_email, _aadhar, _contact, _vaccineName, _dose1, _dose2, "none");
     // }
 
-    if (_name.value == "admin" && _password.value == "admin") {
-      document.getElementsByClassName("mainContent")[0].style.display = "block";
-      document.getElementsByClassName("userAccount")[0].style.display = "none";
+    // console.log($userDetails);
+
+    // console.log(userCollection);
+
+    if (localStorage.getItem("covidInfo") == null) {
+      userCollection.push($userDetails);
+      localStorage.setItem("covidInfo", JSON.stringify(userCollection));
     } else {
-      var userlocalData = localStorage.getItem("covidInfo");
-      userlocalData = JSON.parse(userlocalData);
-      console.log(userlocalData);
-      var TR = "";
-      userlocalData.forEach(function (v, i) {
-        if (_name.value === v.name && _name.value !== "") {
-          TR += "<tr><td> Name </td><td>" + v.name + "</td></tr>";
-          TR += "<tr><td> Email </td><td>" + v.email + "</td></tr>";
-          TR += "<tr><td> Aadhar No </td><td>" + v.aadhar + "</td></tr>";
-          TR += "<tr><td> Contact </td><td>" + v.contact + "</td></tr>";
-          TR +=
-            "<tr><td> Vaccine Type </td><td>" + v.vaccineName + "</td></tr>";
-          TR +=
-            "<tr><td> Vaccine Coverage </td><td>" + v.coverage + "</td></tr>";
-        }
-      });
-      console.log(TR);
-      document.getElementById("BindDataFromLocalToTbody").innerHTML = TR;
-      document.getElementsByClassName("mainContent")[0].style.display = "none";
-      document.getElementsByClassName("userAccount")[0].style.display = "block";
+      var getLocalDataValues = JSON.parse(localStorage.getItem("covidInfo"));
+      console.log(getLocalDataValues);
+      getLocalDataValues.push($userDetails);
+      console.log(getLocalDataValues);
+      // debugger;
+      localStorage.setItem("covidInfo", JSON.stringify(getLocalDataValues));
     }
-  };
+
+    // covidInfo == "" || 0 || null
+    // for (var i = 0; i < userCollection.length; i++) {
+    //   console.log("<h1>" + userCollection[i].name + "</h1>");
+    // }
+
+    // Web Storgae: local, session:
+
+    // console.log(localStorage.getItem("covidInfo")[0]);
+
+    // window.location.href = "../contact.html"; // to get ir set current location.
+    // console.log(window.location.href);
+
+    var _signIn = document.createElement("button");
+    _signIn.id = "signIn";
+    _signIn.innerText = "Sign In";
+
+    /* ----------------  task ------------------- */
+    // replace Already Registered with, Not Registered yet? signUp
+    /* ----------------  task ------------------- */
+
+    this.parentNode.replaceChild(_signIn, this);
+
+    _signIn.onclick = function () {
+      // window.location.href = "../tasks/adminPage.html";
+      _main.style.display = "none";
+      _bindData.style.display = "block";
+
+      // var _EditAsAdmin = document.getElementsByClassName("Edit");
+      // var _SaveAsAdmin = document.getElementsByClassName("Save");
+      // var _DeleteAsAdmin = document.getElementsByClassName("Delete");
+
+      // for (var j = 0; j < _EditAsAdmin.length; j++) {
+      //   _SaveAsAdmin[j].style.display = "none";
+      //   _EditAsAdmin[j].onclick = function () {
+      //     debugger;
+      //     _SaveAsAdmin[0].style.display = "inline";
+      //     var _editTR = this.parentNode.parentNode.children[1];
+      //     var _editTrText = _editTR.innerText;
+
+      //     // var editTrName = document.createElement("input");
+      //     // editTrName.value = _editTrText;
+
+      //     // console.log(editTrName);
+      //     _editTR.innerHTML = "<input value='" + _editTrText + "'>";
+      //     this.style.display = "none";
+
+      //     _SaveAsAdmin[0].onclick = function () {
+      //       _editTR.innerText = _editTR.children[0].value;
+      //       _EditAsAdmin[0].style.display = "inline";
+      //       this.style.display = "none";
+      //     };
+      //   };
+      // }
+
+      if (_name.value == "admin" && _password.value == "admin") {
+        document.getElementsByClassName("mainContent")[0].style.display =
+          "block";
+        document.getElementsByClassName("userAccount")[0].style.display =
+          "none";
+      } else {
+        var userlocalData = localStorage.getItem("covidInfo");
+        userlocalData = JSON.parse(userlocalData);
+        console.log(userlocalData);
+        var TR = "";
+        userlocalData.forEach(function (v, i) {
+          if (_name.value === v.name && _name.value !== "") {
+            TR += "<tr><td> Name </td><td>" + v.name + "</td></tr>";
+            TR += "<tr><td> Email </td><td>" + v.email + "</td></tr>";
+            TR += "<tr><td> Aadhar No </td><td>" + v.aadhar + "</td></tr>";
+            TR += "<tr><td> Contact </td><td>" + v.contact + "</td></tr>";
+            TR +=
+              "<tr><td> Vaccine Type </td><td>" + v.vaccineName + "</td></tr>";
+            TR +=
+              "<tr><td> Vaccine Coverage </td><td>" + v.coverage + "</td></tr>";
+          }
+        });
+        console.log(TR);
+        document.getElementById("BindDataFromLocalToTbody").innerHTML = TR;
+        document.getElementsByClassName("mainContent")[0].style.display =
+          "none";
+        document.getElementsByClassName("userAccount")[0].style.display =
+          "block";
+      }
+    };
+  }
 });
 
 _login.onclick = function () {

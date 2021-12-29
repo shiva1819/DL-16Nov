@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .header {
+      width: 100%;
+      background-color: #ccc;
+      padding: 10px;
+    }
+    .header ul {
+      width: 50%;
+      margin: auto;
+    }
+    .header ul li {
+      display: inline-block;
+      line-height: 20px;
+      width: 100px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1024px) {
+      body {
+        background-color: crimson;
+      }
+    }
+
+    @media screen and (max-width: 840px) {
+      body {
+        background-color: darkcyan;
+      }
+      .header ul {
+        width: 100%;
+      }
+      .header ul li {
+        display: block;
+        background-color: darkblue;
+        color: #fff;
+        width: 100%;
+        margin-top: 1px;
+        line-height: 30px;
+      }
+    }
+    @media screen and (max-width: 524px) {
+      body {
+        background-color: chartreuse;
+      }
+    }
+  </style>
+  <body>
+    <!-- RWD -->
+
+    <div class="header">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </body>
+</html>
